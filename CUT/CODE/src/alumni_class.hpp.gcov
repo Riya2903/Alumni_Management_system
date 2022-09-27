@@ -1,0 +1,84 @@
+        -:    0:Source:alumni_class.hpp
+        -:    0:Graph:menus.gcno
+        -:    0:Data:menus.gcda
+        -:    0:Runs:1
+        -:    1:/*******************************************************************************************
+        -:    2: File Name  : header.hpp
+        -:    3:
+        -:    4:Description : This header consists of the header files, class alumni and its member functions
+        -:    5:*********************************************************************************************/
+        -:    6:
+        -:    7:#ifndef ALUMNI_CLASS_HPP
+        -:    8:#define ALUMNI_CLASS_HPP
+        -:    9:#include<list>
+        -:   10:#include<string>
+        -:   11:#include "validation.cpp"
+        -:   12:#define size 10
+        -:   13:#define len 15
+        -:   14:using namespace std;
+        -:   15:
+        -:   16:class Admin;
+        -:   17:class Alumni
+        -:   18:{
+        -:   19:	protected:
+        -:   20:		string register_number;
+        -:   21:		string name;
+        -:   22:		string present_address;
+        -:   23:		string tel_no;
+        -:   24:		string email_id;
+        -:   25:		string designation;
+        -:   26:		string company;
+        -:   27:		string technology;
+        -:   28:		string years_of_experience;
+        -:   29:		string location;
+        -:   30:		string department;
+        -:   31:		string salary;
+        -:   32:		string posts;
+        -:   33:		friend class Admin;
+        -:   34:	public:
+        -:   35:
+        -:   36:		// string register_number;
+        -:   37:		//string department;
+function _ZN6Alumni11ret_dept_noB5cxx11Ev called 6 returned 100% blocks executed 100%
+        6:   38:		string ret_dept_no()
+        -:   39:		{
+        6:   40:			return this->department;
+call    0 returned 6
+        -:   41:		}
+        -:   42:		string ret_name_no()
+        -:   43:		{
+        -:   44:			return this->name;
+        -:   45:		}
+function _ZN6Alumni10ret_reg_noB5cxx11Ev called 5 returned 100% blocks executed 100%
+        5:   46:		string ret_reg_no()
+        -:   47:		{
+        5:   48:			return this->register_number;
+call    0 returned 5
+        -:   49:		}
+        -:   50:		string ret_tel_no()
+        -:   51:		{
+        -:   52:			return this->tel_no;
+        -:   53:		}
+        -:   54:		string ret_add_no()
+        -:   55:		{
+        -:   56:			return this->present_address;
+        -:   57:		}
+        -:   58:		string ret_email_no()
+        -:   59:		{
+        -:   60:			return this->email_id;
+        -:   61:		}
+        -:   62:
+        -:   63:		void initpointers();
+        -:   64:		int alumni_get_data();
+        -:   65:		int Alumni_Login();
+        -:   66:		virtual int Edit_Details(string);
+        -:   67:		void Create_Posts(string);
+        -:   68:		void view_posts(string);
+        -:   69:		virtual int View_Profile(string);
+        -:   70:
+        -:   71:
+        -:   72:};
+        -:   73:
+        -:   74:
+        -:   75:list<Alumni> alm;
+        -:   76:#endif

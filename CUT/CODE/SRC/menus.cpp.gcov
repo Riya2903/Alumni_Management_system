@@ -1,0 +1,903 @@
+        -:    0:Source:menus.cpp
+        -:    0:Graph:menus.gcno
+        -:    0:Data:menus.gcda
+        -:    0:Runs:1
+        -:    1:/********************************************************************************************************
+        -:    2:*
+        -:    3:******* FILENAME  : menus.cpp
+        -:    4:*
+        -:    5:*** DESCRIPTION   : This file defines the function that consists of various subfunctions 
+        -:    6:*		    to perform certain operations.
+        -:    7:*
+        -:    8:* Revision History:
+        -:    9:*
+        -:   10:*
+        -:   11:* 	Date				Name 				Reason
+        -:   12:*
+        -:   13:* 	27th Sep 2022		     Riya Malik			      -----------
+        -:   14:*
+        -:   15:*
+        -:   16:*********************************************************************************************************/
+        -:   17:
+        -:   18:
+        -:   19:
+        -:   20:#include <iostream>
+        -:   21:#include <iomanip>
+        -:   22:#include "alumni_class.cpp"
+        -:   23:#include "student_class.cpp"
+        -:   24:#include "alumni_files.cpp"
+        -:   25:#include "student_files.cpp"
+        -:   26:#include "admin_class.cpp"
+        -:   27:#include <thread>
+        -:   28:#include <limits>
+        -:   29:#include <mutex>
+        -:   30:using namespace std;
+        -:   31:mutex mylock;
+        -:   32:
+        -:   33:
+        -:   34:/******************************************************************************************
+        -:   35: *
+        -:   36: * FUNCTION NAME  : alumni_menu
+        -:   37: *
+        -:   38: * DESCRIPTION    : An Alumni can register and after successful registration, alumni can 
+        -:   39: * 		    login and access the functions in alumni menu.
+        -:   40: *
+        -:   41: *
+        -:   42: *
+        -:   43: * RETURNS        : Alumni_Register function
+        -:   44: *		    a.Alumni_Login function
+        -:   45: *		    Exit - Back to main menu
+        -:   46: *
+        -:   47: *
+        -:   48: *
+        -:   49: * ***************************************************************************************/
+        -:   50:
+        -:   51:
+function _Z11alumni_menuv called 1 returned 100% blocks executed 63%
+        1:   52:int alumni_menu(void)
+        -:   53:{
+        2:   54: Alumni a;
+call    0 returned 1
+call    1 returned 1
+call    2 never executed
+        1:   55: fstream fl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        -:   56:
+        1:   57:    fl.open("Alumni_database",ios::in | ios::binary);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   58:    if(fl)
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+        -:   59:    {
+    #####:   60:        fl.close();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   61:        cout<<"Fetching data..."<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   62:        fetch_data();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   63:    }
+        1:   64:    int choice1 = 0;
+        4:   65:    while(choice1!=3)
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        -:   66:    {
+        3:   67:    cout<<endl<<"---------Alumini Menu----------"<<endl;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   68:    cout<<"1. Register"<<endl<<"2. Login"<<endl<<"3. Back to Main Menu"<<endl;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 3
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 3
+branch 13 taken 3 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 3
+branch 16 taken 3 (fallthrough)
+branch 17 taken 0 (throw)
+        3:   69:    cin>>choice1;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   70:	while(1)
+        -:   71:	{
+        3:   72:		if(cin.fail())
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 3
+        -:   73:		{
+    #####:   74:			cin.clear();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:			cin.ignore(numeric_limits<streamsize>::max(),'\n');
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   76:			cout<<endl<<"You have entered the wrong input type"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   77:			cout<<"Enter your choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   78:			cin>>choice1;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   79:		}
+        3:   80:		if(!cin.fail())
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0
+        -:   81:		{
+        3:   82:			break;
+        -:   83:		}
+        -:   84:	}
+        3:   85:		system("clear");
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   86:
+        3:   87:    switch(choice1)
+branch  0 taken 1
+branch  1 taken 1
+branch  2 taken 1
+branch  3 taken 0
+        -:   88:    {
+        -:   89:
+        1:   90:        case 1 :
+        2:   91:		{	thread t3(Alumni_Register);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+call    4 never executed
+        1:   92:			t3.join();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   93:		}
+        1:   94:                break;
+        1:   95:	case 2 : a.Alumni_Login();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96:                break;
+        1:   97:        case 3 : break;
+    #####:   98:        default: cout<<"Invalid Choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   99:    }
+        3:  100:system("clear");
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  101:    
+        -:  102:    }
+        1:  103:    store_data();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  104:    return (0);
+call    0 returned 1
+        -:  105:}
+        -:  106:
+        -:  107:
+        -:  108:/**********************************************************************************
+        -:  109: *
+        -:  110: * FUNCTION NAME : student_menu
+        -:  111: *
+        -:  112: * DESCRIPTION   : A student can register and after successful registration, student 
+        -:  113: * 		   can login and access the functions in login menu.
+        -:  114: *
+        -:  115: * RETURNS       : Student_Register function
+        -:  116: *		   s.Student_Login function
+        -:  117: *		   Exit - Back to main menu
+        -:  118: *
+        -:  119: *
+        -:  120: *
+        -:  121: * ******************************************************************************/
+        -:  122:
+        -:  123:
+        -:  124:
+function _Z12student_menuv called 1 returned 100% blocks executed 60%
+        1:  125:int student_menu()
+        -:  126:{
+        2:  127:    student s;
+call    0 returned 1
+call    1 returned 1
+call    2 never executed
+        1:  128:    fstream fl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  129:    fl.open("student_database",ios::in | ios::binary);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  130:    if(fl)
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+        -:  131:    {
+    #####:  132:        fl.close();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  133:        cout<<endl<<"Fetching data..."<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  134:      student_fetch_data();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  135:    }
+        1:  136:    int choice3=0;
+        4:  137:    while(choice3!=3){
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        3:  138:    cout<<endl<<"---------Student Menu----------"<<endl;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:  139:    cout<<"1. Register"<<endl<<"2. Login"<<endl<<"3. Back to Main Menu"<<endl;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 3
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 3
+branch 13 taken 3 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 3
+branch 16 taken 3 (fallthrough)
+branch 17 taken 0 (throw)
+        3:  140:    cin>>choice3;
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  141:	while(1)
+        -:  142:	{
+        3:  143:		if(cin.fail())
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 3
+        -:  144:		{
+    #####:  145:			cin.clear();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  146:			cin.ignore(numeric_limits<streamsize>::max(),'\n');
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  147:			cout<<endl<<"You have entered the wrong input type"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  148:			cout<<"Enter your choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  149:			cin>>choice3;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  150:		}
+        3:  151:		if(!cin.fail())
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0
+        -:  152:		{
+        3:  153:			break;
+        -:  154:		}
+        -:  155:	}
+        3:  156:system("clear");
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  157:    switch(choice3)
+branch  0 taken 1
+branch  1 taken 1
+branch  2 taken 1
+branch  3 taken 0
+        -:  158:    {
+        -:  159:
+        1:  160:        case 1:
+        2:  161:		{	thread t2(Student_Register);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+call    4 never executed
+        1:  162:		t2.join();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  163:		}
+        1:  164:                break;
+        1:  165:        case 2: s.Student_Login();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  166:                break;
+        1:  167:        case 3: break;
+    #####:  168:        default: cout<<"Invalid Choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  169:    
+    #####:  170:system("read a");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  171:system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  172:    }
+        -:  173:    }
+        1:  174:    student_store_data();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  175:    return (0);
+call    0 returned 1
+        -:  176:}
+        -:  177:
+        -:  178:/**************************************************************************************
+        -:  179: *
+        -:  180: * FUNCTION NAME : Admin_Login
+        -:  181: *
+        -:  182: * DESCRIPTION   : Admin can login, modify, delete, view records of Alumni database, student database and 
+        -:  183: * 		   prepare a report of students who are not placed. Admin can Manages the Report for Connect Session. 
+        -:  184: *
+        -:  185: * RETURNS       : a.Edit_Alumni function
+        -:  186: * 		   a.delete_alumni_record function
+        -:  187: *		   a.list_of_connect function
+        -:  188: *		   a.Report_Nonplaced_Students function
+        -:  189: *		   a.Completed_Connect_Report function
+        -:  190: *		   a.Connect_Delete function
+        -:  191: *		   Exit - Back to main menu
+        -:  192: *
+        -:  193: *
+        -:  194: *
+        -:  195: *
+        -:  196: *
+        -:  197: *  *********************************************************************************/
+function _Z11Admin_Loginv called 1 returned 100% blocks executed 61%
+        1:  198:int Admin_Login(void)
+        -:  199:
+        -:  200:{
+        -:  201:	//access to this function is mutually exclusive.
+        2:  202:lock_guard<mutex> lock(mylock);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+call    4 never executed
+        2:  203:	Admin a;
+call    0 returned 1
+call    1 returned 1
+call    2 never executed
+        -:  204:
+        2:  205:	string var;
+call    0 returned 1
+call    1 returned 1
+call    2 never executed
+        2:  206:	string passcode = "UADMIN003";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+call    5 never executed
+        2:  207:	string passcode1 = "UADMIN002";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+call    5 never executed
+        2:  208:	string passcode2 = "UADMIN001";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+call    5 never executed
+        1:  209:	cout<<endl<<"Enter the passcode in order to access admin dashboard"<<endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  210:cin>>var;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  211: if(var==passcode || var==passcode1 || var==passcode2)
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        -:  212: {
+        1:  213:    int choice6=0;
+        7:  214:    while(choice6!=7){
+branch  0 taken 7 (fallthrough)
+branch  1 taken 0
+        7:  215:    cout<<endl<<"-------------Admin dashboard-----------"<<endl;
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+        7:  216:    cout<<"1. Edit  Alumni details"<<endl<<"2.Delete the Alumni recodrs" <<endl<<"3. list of connects"<<endl<<"4. Report nonplaced student"<<endl<<"5. completed connect Reports"<<endl<<"6. Delete the Connect"<<endl<<"7. Back to Main Menu"<<endl;
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 7
+branch 10 taken 7 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 7
+branch 13 taken 7 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 7
+branch 16 taken 7 (fallthrough)
+branch 17 taken 0 (throw)
+call   18 returned 7
+branch 19 taken 7 (fallthrough)
+branch 20 taken 0 (throw)
+call   21 returned 7
+branch 22 taken 7 (fallthrough)
+branch 23 taken 0 (throw)
+call   24 returned 7
+branch 25 taken 7 (fallthrough)
+branch 26 taken 0 (throw)
+call   27 returned 7
+branch 28 taken 7 (fallthrough)
+branch 29 taken 0 (throw)
+call   30 returned 7
+branch 31 taken 7 (fallthrough)
+branch 32 taken 0 (throw)
+call   33 returned 7
+branch 34 taken 7 (fallthrough)
+branch 35 taken 0 (throw)
+call   36 returned 7
+branch 37 taken 7 (fallthrough)
+branch 38 taken 0 (throw)
+call   39 returned 7
+branch 40 taken 7 (fallthrough)
+branch 41 taken 0 (throw)
+        7:  217:    cin>>choice6;
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  218:	while(1)
+        -:  219:	{
+        7:  220:		if(cin.fail())
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 7
+        -:  221:		{
+    #####:  222:			cin.clear();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  223:			cin.ignore(numeric_limits<streamsize>::max(),'\n');
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  224:			cout<<endl<<"You have entered the wrong input type"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  225:			cout<<"Enter your choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  226:			cin>>choice6;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  227:		}
+        7:  228:		if(!cin.fail())
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0
+        -:  229:		{
+        7:  230:			break;
+        -:  231:		}
+        -:  232:	}
+        7:  233:    switch(choice6)
+branch  0 taken 1
+branch  1 taken 1
+branch  2 taken 1
+branch  3 taken 1
+branch  4 taken 1
+branch  5 taken 1
+branch  6 taken 1
+branch  7 taken 0
+        -:  234:    { 
+        1:  235:        case 1: 
+        -:  236:
+        1:  237:		a.Edit_Alumni();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  238:	
+        1:  239:                break;
+        -:  240:
+        1:  241:        case 2: 
+        1:  242:		a.delete_alumni_record();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  243:		
+        1:  244:                break;
+        1:  245:        case 3: a.list_of_connects(); 
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  246:                break;
+        1:  247:        case 4: a.Report_Nonplaced_Students();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  248:                break;
+        1:  249:        case 5 :a.Completed_Connect_Report();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  250:                 break;
+        1:  251:	case 6 :a.Connect_Delete();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  252:		break;
+        1:  253:        case 7: return 1;
+    #####:  254:        default: cout<<"Invalid Choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  255:    }
+        -:  256:    
+        -:  257:    }
+        -:  258: }
+        -:  259: else
+        -:  260: {
+    #####:  261:	 cout<<endl<<"Wrong credentials!"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        -:  262: }
+    #####:  263:    return (0);
+        -:  264:}
+        -:  265:
+        -:  266:
+        -:  267:
+        -:  268:
+        -:  269:/**************************************************************************************
+        -:  270: *
+        -:  271: * FUNCTION NAME : main
+        -:  272: *
+        -:  273: * DESCRIPTION   : This functin calls the other functions  to perform various operations by taking 
+        -:  274: * 	           choice from the user.
+        -:  275: *
+        -:  276: * RETURNS       : alumni_menu function
+        -:  277: * 		   student_menu function
+        -:  278: *		   Admin_menu  function
+        -:  279: *		   Exit -  exit the main function
+        -:  280: *
+        -:  281: *
+        -:  282: *  **********************************************************************************/
+        -:  283:
+        -:  284:
+        -:  285:
+function main called 1 returned 100% blocks executed 73%
+        1:  286:int main(void)
+        -:  287:{
+        -:  288:
+        1:  289:    int choice=0;
+        5:  290:    while(choice!=4)
+branch  0 taken 4 (fallthrough)
+branch  1 taken 1
+        -:  291:    {
+        -:  292:
+        4:  293:        cout<<endl<<"----------Sardar University Alumni Management Portal----------"<<endl<<endl<<endl;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+        4:  294:        cout<<"1. Alumni"<<endl<<"2. Student"<<endl<<"3. Admin"<<endl<<"4. Exit"<<endl;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+branch 16 taken 4 (fallthrough)
+branch 17 taken 0 (throw)
+call   18 returned 4
+branch 19 taken 4 (fallthrough)
+branch 20 taken 0 (throw)
+call   21 returned 4
+branch 22 taken 4 (fallthrough)
+branch 23 taken 0 (throw)
+        4:  295:        cout<<"Enter your choice"<<endl;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  296:        cin>>choice;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  297:	while(1)
+        -:  298:	{
+        4:  299:		if(cin.fail())
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 0 (fallthrough)
+branch  4 taken 4
+        -:  300:		{
+    #####:  301:			cin.clear();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  302:			cin.ignore(numeric_limits<streamsize>::max(),'\n');
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  303:			cout<<endl<<"You have entered the wrong input type"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  304:			cout<<"Enter your choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  305:			cin>>choice;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  306:		}
+        4:  307:		if(!cin.fail())
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0
+        -:  308:		{
+        4:  309:			break;
+        -:  310:		}
+        -:  311:	}
+        4:  312:system("clear");
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  313:        switch(choice)
+branch  0 taken 1
+branch  1 taken 1
+branch  2 taken 1
+branch  3 taken 1
+branch  4 taken 0
+        -:  314:        {
+        1:  315:            case 1: alumni_menu();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  316:                    break;
+        1:  317:            case 2: student_menu();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  318:                    break;
+        1:  319:            case 3: 
+        2:  320:		    { thread t1(Admin_Login);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+call    4 never executed
+        1:  321:		    t1.join();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  322:		    }
+        1:  323:                    break;
+        1:  324:            case 4: break;
+    #####:  325:            default: cout<<"Invalid Choice"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  326:	}
+        4:  327:system("read a");
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  328:system("clear");
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  329:	
+        -:  330:
+        -:  331:    }
+        1:  332:return 0;
+        -:  333:}
+        -:  334:

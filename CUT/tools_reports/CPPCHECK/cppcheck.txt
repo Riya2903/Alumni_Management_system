@@ -1,0 +1,131 @@
+admin_class.cpp:334:2: style: The exception is caught by value. It could be caught as a (const) reference which is usually recommended in C++. [catchExceptionByValue]
+ catch(string s)
+ ^
+student_class.cpp:146:6: style: The scope of the variable 'choice5' can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for 'i' can be reduced:
+void f(int x)
+{
+    int i = 0;
+    if (x) {
+        // it's safe to move 'int i = 0;' here
+        for (int n = 0; n < 10; ++n) {
+            // it is possible but not safe to move 'int i = 0;' here
+            do_something(&i);
+        }
+    }
+}
+When you see this message it is always safe to reduce the variable scope 1 level. [variableScope]
+ int choice5=0;
+     ^
+student_class.cpp:485:6: style: The scope of the variable 'flag' can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for 'i' can be reduced:
+void f(int x)
+{
+    int i = 0;
+    if (x) {
+        // it's safe to move 'int i = 0;' here
+        for (int n = 0; n < 10; ++n) {
+            // it is possible but not safe to move 'int i = 0;' here
+            do_something(&i);
+        }
+    }
+}
+When you see this message it is always safe to reduce the variable scope 1 level. [variableScope]
+ int flag = 0;
+     ^
+admin_class.cpp:159:6: style: The scope of the variable 'flag' can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for 'i' can be reduced:
+void f(int x)
+{
+    int i = 0;
+    if (x) {
+        // it's safe to move 'int i = 0;' here
+        for (int n = 0; n < 10; ++n) {
+            // it is possible but not safe to move 'int i = 0;' here
+            do_something(&i);
+        }
+    }
+}
+When you see this message it is always safe to reduce the variable scope 1 level. [variableScope]
+ int flag = 0;
+     ^
+alumni_class.cpp:484:32: style: Local variable 'it' shadows outer variable [shadowVariable]
+    for(list<Alumni>::iterator it=alm.begin();it!=alm.end();it++);
+                               ^
+alumni_class.cpp:470:29: note: Shadowed declaration
+ for(list<Alumni>::iterator it=alm.begin();it!=alm.end();it++)
+                            ^
+alumni_class.cpp:484:32: note: Shadow variable
+    for(list<Alumni>::iterator it=alm.begin();it!=alm.end();it++);
+                               ^
+student_class.cpp:493:12: style: Local variable 'iter' shadows outer variable [shadowVariable]
+  for(auto iter = alm.begin(); iter!=alm.end();iter++)
+           ^
+student_class.cpp:488:11: note: Shadowed declaration
+ for(auto iter = stl.begin(); iter!=stl.end();iter++)
+          ^
+student_class.cpp:493:12: note: Shadow variable
+  for(auto iter = alm.begin(); iter!=alm.end();iter++)
+           ^
+student_class.cpp:507:12: style: Local variable 'flag' shadows outer variable [shadowVariable]
+ catch(int flag)
+           ^
+student_class.cpp:485:6: note: Shadowed declaration
+ int flag = 0;
+     ^
+student_class.cpp:507:12: note: Shadow variable
+ catch(int flag)
+           ^
+admin_class.cpp:177:12: style: Local variable 'flag' shadows outer variable [shadowVariable]
+ catch(int flag)
+           ^
+admin_class.cpp:159:6: note: Shadowed declaration
+ int flag = 0;
+     ^
+admin_class.cpp:177:12: note: Shadow variable
+ catch(int flag)
+           ^
+student_class.cpp:331:31: performance: Parameter 'reg_num' is passed by value. It could be passed as a const reference which is usually faster and recommended in C++. [passedByValue]
+int student::Edit_Info(string reg_num)
+                              ^
+student_class.cpp:444:36: performance: Parameter 'reg_num' is passed by value. It could be passed as a const reference which is usually faster and recommended in C++. [passedByValue]
+int student :: view_profile(string reg_num)
+                                   ^
+student_class.cpp:477:43: performance: Parameter 'reg_no' is passed by value. It could be passed as a const reference which is usually faster and recommended in C++. [passedByValue]
+int student :: View_Alumni_Details(string reg_no)
+                                          ^
+student_class.cpp:529:34: performance: Parameter 'reg_no' is passed by value. It could be passed as a const reference which is usually faster and recommended in C++. [passedByValue]
+void student :: Job_Posts(string reg_no)
+                                 ^
+validation.cpp:141:32: style: Parameter 's' can be declared with const [constParameter]
+  int check_department(string& s)
+                               ^
+alumni_class.cpp:263:58: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<Alumni>::iterator it=alm.begin();it!=alm.end();it++)
+                                                         ^
+alumni_class.cpp:470:58: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<Alumni>::iterator it=alm.begin();it!=alm.end();it++)
+                                                         ^
+alumni_class.cpp:484:61: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+    for(list<Alumni>::iterator it=alm.begin();it!=alm.end();it++);
+                                                            ^
+student_class.cpp:247:61: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<student>::iterator it = stl.begin();it!=stl.end();it++)
+                                                            ^
+student_class.cpp:343:59: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<student>::iterator it=stl.begin();it!=stl.end();it++)
+                                                          ^
+student_class.cpp:447:59: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<student>::iterator it=stl.begin();it!=stl.end();it++)
+                                                          ^
+admin_class.cpp:154:63: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<Alumni>::iterator it = temp.begin(); it!=temp.end();it++)
+                                                              ^
+admin_class.cpp:163:61: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<Alumni>::iterator it = alm.begin(); it!=alm.end();it++)
+                                                            ^
+admin_class.cpp:202:61: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<Alumni>::iterator it = alm.begin(); it!=alm.end();it++)
+                                                            ^
+admin_class.cpp:212:63: performance: Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code. [postfixOperator]
+ for(list<Alumni>::iterator it = temp.begin(); it!=temp.end();it++)
+                                                              ^
+nofile:0:0: information: Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project's include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config. [missingIncludeSystem]
+

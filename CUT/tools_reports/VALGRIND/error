@@ -1,0 +1,157 @@
+==286796== Memcheck, a memory error detector
+==286796== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==286796== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==286796== Command: ./test
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x11774F: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffd58 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x117761: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffd38 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x117773: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffd18 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x117785: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffcf8 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x117797: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffcd8 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x1177A9: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffcb8 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x1177BB: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffc98 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x1177CD: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffc78 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x1177DF: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffc58 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x1177EF: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffc38 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x1177FF: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffc18 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x11780F: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffbf8 is on thread 1's stack
+==286796==  in frame #2, created by fetch_data() (???:)
+==286796== 
+==286796== Invalid free() / delete / delete[] / realloc()
+==286796==    at 0x4839EAB: operator delete(void*) (vg_replace_malloc.c:584)
+==286796==    by 0x11781F: Alumni::~Alumni() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1136A4: fetch_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x1152CF: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x1ffefffbd8 is on thread 1's stack
+==286796==  in frame #1, created by Alumni::~Alumni() (???:)
+==286796== 
+sh: 1: read: arg count
+sh: 1: read: arg count
+sh: 1: read: arg count
+sh: 1: read: arg count
+==286796== Syscall param write(buf) points to uninitialised byte(s)
+==286796==    at 0x485DFEF: __libc_write (write.c:26)
+==286796==    by 0x485DFEF: write (write.c:24)
+==286796==    by 0x4933A95: std::__basic_file<char>::xsputn(char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x496E1F0: std::basic_filebuf<char, std::char_traits<char> >::_M_convert_to_external(char*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x496E5C3: std::basic_filebuf<char, std::char_traits<char> >::overflow(int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x496E33E: std::basic_filebuf<char, std::char_traits<char> >::_M_terminate_output() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x497143B: std::basic_filebuf<char, std::char_traits<char> >::close() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x497318C: std::basic_fstream<char, std::char_traits<char> >::close() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x11381D: store_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11552B: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==  Address 0x4dcc51f is 31 bytes inside a block of size 8,192 alloc'd
+==286796==    at 0x483950F: operator new[](unsigned long) (vg_replace_malloc.c:431)
+==286796==    by 0x496E0B3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x4971FE2: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x497222C: std::basic_fstream<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==286796==    by 0x113721: store_data() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11552B: alumni_menu() (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796==    by 0x11604B: main (in /home/cguser6/Alumni_management_system/CUT/CODE/src/test)
+==286796== 
+==286796== 
+==286796== HEAP SUMMARY:
+==286796==     in use at exit: 0 bytes in 0 blocks
+==286796==   total heap usage: 6,334 allocs, 6,347 frees, 171,160 bytes allocated
+==286796== 
+==286796== All heap blocks were freed -- no leaks are possible
+==286796== 
+==286796== Use --track-origins=yes to see where uninitialised values come from
+==286796== For lists of detected and suppressed errors, rerun with: -s
+==286796== ERROR SUMMARY: 15 errors from 14 contexts (suppressed: 0 from 0)

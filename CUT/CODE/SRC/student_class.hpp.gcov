@@ -1,0 +1,57 @@
+        -:    0:Source:student_class.hpp
+        -:    0:Graph:menus.gcno
+        -:    0:Data:menus.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef STUDENT_CLASS_HPP
+        -:    2:#define STUDENT_CLASS_HPP
+        -:    3:#pragma once
+        -:    4:#include<string>
+        -:    5:#include<iostream>
+        -:    6:#include<list>
+        -:    7://#include "validation.cpp"
+        -:    8:#include <tuple>
+        -:    9:#include<forward_list>
+        -:   10:using namespace std;
+        -:   11:class student : virtual Alumni
+        -:   12:{
+        -:   13:        protected:
+        -:   14:                string student_register_number;
+        -:   15:                string student_name;
+        -:   16:                string student_tel_no;
+        -:   17:                string student_email_id;
+        -:   18:                string student_department;
+        -:   19:		string placed;
+        -:   20:        public:
+function _ZN7student10ret_placedB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   21:		string ret_placed()
+        -:   22:		{
+        1:   23:			return this->placed;
+call    0 returned 1
+        -:   24:		}
+        -:   25:
+function _ZN7student8ret_deptB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   26:		string ret_dept()
+        -:   27:		{
+        1:   28:			return this->student_department;
+call    0 returned 1
+        -:   29:		}
+function _ZN7student7ret_regB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   30:		string ret_reg()
+        -:   31:		{
+        1:   32:			return this->student_register_number;
+call    0 returned 1
+        -:   33:		}
+        -:   34:		int student_get_data();
+        -:   35:                int Student_Login();
+        -:   36:		int view_profile(string);
+        -:   37:		int Edit_Info(string);
+        -:   38:                int View_Alumni_Details(string);
+        -:   39:                void Job_Posts(string);
+        -:   40:		int ask_for_connect(string);
+        -:   41:};
+        -:   42:list<student> stl;
+        -:   43:tuple<string,string,string>connect1;
+        -:   44:forward_list<tuple<string,string,string>> all_connect;
+        -:   45:#define size 10
+        -:   46:#define len 15
+        -:   47:#endif
